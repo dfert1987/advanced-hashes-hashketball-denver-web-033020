@@ -212,9 +212,12 @@ def big_shoe_rebounds
   rebounds = 0
   game_hash.each do |home_road, team|
     team[:players].each do |player|
+      #fore each player on a given team
       size = player[:shoe]
+      # set shoe as size
       if size > biggest_shoe
         biggest_shoe = size
+        #if size is bigger than bigger shoe, it becomes the biggerst shoe, if it's the biggest shoe we return that plahyer's rebounds
         rebounds = player[:rebounds]
       end
     end
